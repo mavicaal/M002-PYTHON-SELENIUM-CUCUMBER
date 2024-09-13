@@ -1,8 +1,8 @@
-Feature: Login Functionality
+Feature: Login Functionality for the Health Care Service system
 
     Scenario: Successful Login
         Given I am on the login page
-        When I enter standard_user as the username
-        And I enter secret_sauce as the password
+        When I enter John Doe as the username
+        And I enter ThisIsNotAPassword as the password
         And I click on the login button
-        Then I should be redirected to the inventory page
+        Then I should be redirected to the Appointment page
