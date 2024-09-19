@@ -8,7 +8,7 @@ class LoginPage:
         self.password_field = self.browser.find_element(By.ID,'txt-password')
         self.login_button = self.browser.find_element(By.ID,'btn-login')
 
-    def navigate_to_login_page(self):
+    def validate_login_page(self):
         assert '#login' in self.browser.current_url, 'Not on the Login page'
 
     def input_username(self, username):
@@ -22,3 +22,6 @@ class LoginPage:
 
     def verify_appointment_page_is_opened(self):
         assert '#appointment' in self.browser.current_url, 'Not on the Appointment page'
+
+    def verify_error_message(self):
+        self.browser.find_element(By.XPATH,"//p[contains(text(), 'Login failed! Please ensure the username and password are valid.')]")

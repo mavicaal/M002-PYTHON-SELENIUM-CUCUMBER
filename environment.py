@@ -3,8 +3,8 @@ from selenium import webdriver
 from pages.login_page import LoginPage
 
 def before_scenario(self,context):
-    driver = webdriver.Chrome() 
-    self.login_page = LoginPage(driver)
+    self.driver = webdriver.Chrome() 
+    self.login_page = LoginPage(self.driver)
 
-# def after_scenario(context):
-#     context.driver.quit()
+def after_scenario(self,context):
+    self.driver.quit()
