@@ -1,0 +1,10 @@
+{
+    "success_login": {
+        "username": "John Doe",
+        "password": "ThisIsNotAPassword"
+    },
+    "bad_login": {
+        "username": "Bad username",
+        "password": "Bad password"
+    }
+}
