@@ -37,6 +37,7 @@ class AppointmentPage:
 
     def set_visit_date(self, date):
         appointment_date_field = self.browser.find_element(By.ID,'txt_visit_date')
+        assert appointment_date_field.get_attribute("required") == "true", "Input is not required"
         appointment_date_field.send_keys(date)
         self.visit_date = date
 
